@@ -82,19 +82,33 @@ header{
   background:linear-gradient(90deg,#0f1426,#1a2140);
   padding:18px;
   text-align:center;
+  position:relative; /* สำคัญสำหรับวางโลโก้ */
   box-shadow:
     0 4px 14px rgba(0,0,0,.7),
     inset 0 -1px 0 var(--border)
 }
+
+/* โลโก้หุ่นยนต์ซ้ายบน */
+.headerLogo{
+  position:absolute;
+  left:231px;     /* ขยับเข้าหาแผนภูมิ */
+  top:6px;
+  height:97px;    /* ขยายรูปใหญ่ขึ้น */
+  border-radius:8px;
+  filter:drop-shadow(0 0 10px #4da3ff);
+}
+
 header h2{
   margin:0;
   font-weight:600;
   letter-spacing:.6px
 }
+
 header div{
   font-size:13px;
   color:#b7c4ff
 }
+
 .expire{
   margin-top:6px;
   font-size:12px;
@@ -317,11 +331,14 @@ button{
 
 <div id="app">
 <header>
-  <h2>📊 Smart Baccarat Killer</h2>
-  <div>Professional Analysis System</div>
-  <div class="expire">⏳ วันหมดอายุ : 24 มีนาคม พ.ศ. 2569</div>
-</header>
 
+<img src="robot.png" class="headerLogo">
+
+<h2>📊 Smart Baccarat Killer</h2>
+<div>Professional Analysis System</div>
+<div class="expire">⏳ วันหมดอายุ : 24 มีนาคม พ.ศ. 2569</div>
+
+</header>
 <div class="section">
 <button class="player" onclick="add('P')">PLAYER</button>
 <button class="banker" onclick="add('B')">BANKER</button>
